@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/greeting/{id?}', [Greeting::class, 'index'])->where('id', '[0-9]+');
+Route::get('/greeting/{id?}', [Greeting::class, 'index'])->name('greeting');
